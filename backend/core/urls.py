@@ -5,4 +5,5 @@ from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include("follower.urls")),
+    path('four/', include('chapter_4.urls')),
 ]
