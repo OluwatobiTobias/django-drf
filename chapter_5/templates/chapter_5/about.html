@@ -5,4 +5,7 @@
         <h2>{{blog.title}}</h2>
         <P>{{blog.body}}</P>
     </div>
+
+<a href="{% url 'chapter_5:update5' blog.pk %}">+ Edit Blog Post</a>
+<a href="{% url 'chapter_5:delete5' blog.pk %}">+ Delete Blog Post</a>
 {% endblock content %}

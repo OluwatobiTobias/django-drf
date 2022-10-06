@@ -10,7 +10,14 @@
 <header>
 <h1><a href="{% url 'chapter_5:home5' %}">Django</a></h1>
 </header>
-<div>
+<div class="nav-left">
+    <h1>
+        <a href="{% url 'chapter_5:home5' %}">Blogs</a>
+    </h1>
+</div>
+<div class="nav-right">
+    <a href="{% url 'chapter_5:create5' %}">+ New Blog</a>
+</div>
 {% block content %}
 {% endblock content %}
 </div>
