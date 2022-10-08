@@ -1,12 +1,6 @@
 {% extends "chapter_5/base.html" %}
 
 {% block content %}
-<div class="nav-right">
-    <a href="{% url 'chapter_5:create5' %}">+ New Blog</a>
-</div>
-
-<br/>
-
 {% for post in blog_list%}
     <div class="post-entry">
         <h2>

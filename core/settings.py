@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "follower",
     "chapter_4",
     "chapter_5",
+    "chapter_7",
 ]
 
 MIDDLEWARE = [
@@ -117,3 +118,6 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
+
+LOGIN_REDIRECT_URL = "chapter_5:home5"
+LOGOUT_REDIRECT_URL = "chapter_5:home5"
