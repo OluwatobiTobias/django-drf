@@ -33,12 +33,17 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
+    # 3rd party
+    "whitenoise.runserver_nostatic",
+    "crispy_forms",
+    "crispy_bootstrap5",
+    # Local
     "follower",
     "chapter_4",
-    "chapter_5",
+    #"chapter_5",
     "chapter_7",
+    "chapter_8",
 ]
 
 MIDDLEWARE = [
@@ -54,10 +59,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "core.urls"
 
+AUTH_USER_MODEL = "chapter_8.CustomUser"
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -121,9 +128,14 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
-LOGIN_REDIRECT_URL = "chapter_5:home5"
-LOGOUT_REDIRECT_URL = "chapter_5:home5"
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+#STATIC_ROOT = BASE_DIR / "staticfiles"
 #STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+#STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+CRISPY_ALLOWED_TEMPLATE_PACK = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
