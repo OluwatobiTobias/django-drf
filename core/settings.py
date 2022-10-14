@@ -34,16 +34,20 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
     # 3rd party
-    "whitenoise.runserver_nostatic",
+    #"whitenoise.runserver_nostatic",
     "crispy_forms",
     "crispy_bootstrap5",
+
     # Local
-    "follower",
-    "chapter_4",
+    #"follower",
+    #"chapter_4",
     #"chapter_5",
-    "chapter_7",
-    "chapter_8",
+    #"chapter_7",
+    #"chapter_8",
+    "chapter_13",
+
 ]
 
 MIDDLEWARE = [
@@ -59,7 +63,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "core.urls"
 
-AUTH_USER_MODEL = "chapter_8.CustomUser"
+#AUTH_USER_MODEL = "chapter_13.Article"
 
 TEMPLATES = [
     {
